@@ -1,0 +1,45 @@
+version: '3'
+services:
+  scraping-server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    image: scraping-server
+    container_name: scraping-server
+
+    restart: always
+    tty: true
+
+    volumes:
+      - ./src:/src
+
+    working_dir: /src
+
+    networks:
+      - web-recommendation-network
+
+  mongodb:
+    image: mongo:5.0.5
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+
+    ports:
+      - 27017:27017
+
+    networks:
+      - web-recommendation-network
+
+
+    volumes:
+      - webpage-db:/data/db
+
+networks:
+  web-recommendation-network:
+    name: web-recommendation-network
+
+volumes:
+  webpage-db:
+    driver: local
