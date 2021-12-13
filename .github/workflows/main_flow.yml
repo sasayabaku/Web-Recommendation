@@ -1,0 +1,18 @@
+name: pythontest
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pythontest:
+    name: Run Docker Build
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Docker Setup
+        run: |
+          docker compose build
+          docker compose up -d
