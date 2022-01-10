@@ -8,7 +8,7 @@ RUN pip install -r /requirements.txt
 
 # Juman++ Install
 RUN apt update
-RUN apt install -y libboost-dev build-essential cmake
+RUN apt install -y libboost-dev build-essential cmake wget
 RUN wget https://github.com/ku-nlp/jumanpp/releases/download/v2.0.0-rc2/jumanpp-2.0.0-rc2.tar.xz
 RUN tar xJvf jumanpp-2.00-rc2.tar.xz
 WORKDIR /jumanpp-2.00-rc2
