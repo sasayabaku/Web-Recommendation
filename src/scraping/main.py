@@ -61,6 +61,14 @@ class BookmarkAnalyzer(object):
             upsert=True
         )
 
+        return { "url": url, "title": self.title }
+
+    def get_url(self, url):
+        
+        urls = [i for i in self.mongo_collection.find()]
+
+        return urls
+
     def _check_mongo(self):
         ic("Mongo DB ====>")
         for doc in self.mongo_collection.find():
