@@ -4,4 +4,4 @@
 
 * N-gram Feature Extraction
 
-<a href="https://colab.research.google.com/drive/1RX-bvDyvcUpcEDEVFAX-LIlVFD3Bzl2d?usp=sharing"><span><img src="https://img.shields.io/badge/colab-notebook-f9ab00?style=flat&logo=GoogleColab" /></span></a>
+<a href="https://www.kaggle.com/sasayabaku/web-analyze-n-gram"><span><img src="https://img.shields.io/badge/kaggle-notebook-20beff?style=flat&logo=kaggle" /></span></a>
